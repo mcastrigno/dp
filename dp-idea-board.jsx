@@ -138,11 +138,15 @@ export default function IdeaBoard() {
   }
 
   function exportJSON() {
-    const blob = new Blob([JSON.stringify({ ideas, tagDefs }, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = "donnelly-place-ideas.json"; a.click();
-    URL.revokeObjectURL(url);
+    try {
+      const text = JSON.stringify({ ideas, tagDefs }, null, 2);
+      navigator.clipboard.writeText(text).then(() => {
+        setSaveStatus("copied");
+        setTimeout(() => setSaveStatus(""), 2000);
+      });
+    } catch (e) {
+      setSaveStatus("error");
+    }
   }
 
   function importJSON(e) {
@@ -216,7 +220,7 @@ export default function IdeaBoard() {
             </span>
             {saveStatus && (
               <span style={{ color: saveStatus === "saved" ? "#6a9" : "#e44", fontSize: 12, opacity: 0.8 }}>
-                {saveStatus === "saved" ? "✓ saved" : "⚠ error"}
+                {saveStatus === "saved" ? "✓ saved" : saveStatus === "copied" ? "✓ copied to clipboard" : "⚠ error"}
               </span>
             )}
           </div>
@@ -470,7 +474,7 @@ export default function IdeaBoard() {
               padding: "8px 20px", background: "rgba(245,200,0,0.1)",
               border: "1px solid rgba(245,200,0,0.3)", borderRadius: 6,
               color: "#F5C800", fontSize: 12, cursor: "pointer", letterSpacing: 0.5,
-            }}>↓ Export JSON</button>
+            }}>⎘ Copy JSON</button>
             <label style={{
               padding: "8px 20px", background: "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.1)", borderRadius: 6,
