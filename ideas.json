@@ -1,0 +1,39 @@
+{
+  "ideas": [
+    {
+      "id": "mm40fcrnqwhe",
+      "text": "fix logo to get rid of small text",
+      "tags": [
+        "UI"
+      ],
+      "done": false,
+      "createdAt": 1772143402595
+    }
+  ],
+  "tagDefs": {
+    "UI": {
+      "bg": "#8B1A1A",
+      "text": "#fff"
+    },
+    "Content": {
+      "bg": "#4A2E1A",
+      "text": "#F5C800"
+    },
+    "Feature": {
+      "bg": "#C8A800",
+      "text": "#1a1a1a"
+    },
+    "Question": {
+      "bg": "#2a4a1a",
+      "text": "#a8e47a"
+    },
+    "Hosting": {
+      "bg": "#1a3a5a",
+      "text": "#7ac8e4"
+    },
+    "Later": {
+      "bg": "#3a3a3a",
+      "text": "#aaa"
+    }
+  }
+}

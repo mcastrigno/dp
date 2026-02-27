@@ -11,7 +11,7 @@ A website for **Donnelly Place**, a mixed-use building owned and operated by **V
 ## File Structure
 ```
 dp/
-├── donnellyplace.html      # Main single-page website
+├── index.html              # Main single-page website
 ├── dp-idea-board.jsx       # Idea board (local/Claude only for now)
 ├── images/
 │   ├── logo.png
