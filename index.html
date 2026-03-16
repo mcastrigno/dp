@@ -20,6 +20,7 @@
       --slate:    #555;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
+    img { max-width:100%; height:auto; display:block; }
     html { scroll-behavior:smooth; }
     body { font-family:'Roboto',sans-serif; background:var(--cream); color:var(--text); overflow-x:hidden; }
 
@@ -256,11 +257,46 @@
     <h2 class="section-title" style="color:var(--brown);">See the Spaces</h2>
   </div>
   <div class="gallery-grid">
-    <img src="images/building.jpg" alt="Building exterior"/>
-    <img src="images/entry.jpg" alt="Apartment entry"/>
-    <img src="images/office.jpg" alt="Office space"/>
-    <img src="images/hallway.jpg" alt="Hallway"/>
-    <img src="images/keycode.jpg" alt="Key code access"/>
+    <img
+      src="public/images/Suite 1C/wide_reception.JPG"
+      srcset="public/images/Suite 1C/wide_reception-400.webp 400w, public/images/Suite 1C/wide_reception-800.webp 800w, public/images/Suite 1C/wide_reception-1200.webp 1200w"
+      sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      width="3008" height="2000"
+      alt="Suite 1C - wide reception"
+      loading="lazy"
+    />
+    <img
+      src="public/images/APT 2B/2B Living Room.JPG"
+      srcset="public/images/APT 2B/2B Living Room-400.webp 400w, public/images/APT 2B/2B Living Room-800.webp 800w, public/images/APT 2B/2B Living Room-1200.webp 1200w"
+      sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      width="4032" height="3024"
+      alt="APT 2B - living room"
+      loading="lazy"
+    />
+    <img
+      src="public/images/APT 2A/2A Den.JPG"
+      srcset="public/images/APT 2A/2A Den-400.webp 400w, public/images/APT 2A/2A Den-800.webp 800w, public/images/APT 2A/2A Den-1200.webp 1200w"
+      sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      width="4032" height="3024"
+      alt="APT 2A - den"
+      loading="lazy"
+    />
+    <img
+      src="public/images/Suite 1B/1B lobby.jpg"
+      srcset="public/images/Suite 1B/1B lobby-400.webp 400w, public/images/Suite 1B/1B lobby-800.webp 800w, public/images/Suite 1B/1B lobby-1200.webp 1200w"
+      sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      width="4032" height="3024"
+      alt="Suite 1B - lobby"
+      loading="lazy"
+    />
+    <img
+      src="public/images/Suite 1A/A1-3/A1-3 View From Entrance.JPG"
+      srcset="public/images/Suite 1A/A1-3/A1-3 View From Entrance-400.webp 400w, public/images/Suite 1A/A1-3/A1-3 View From Entrance-800.webp 800w, public/images/Suite 1A/A1-3/A1-3 View From Entrance-1200.webp 1200w"
+      sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      width="4032" height="3024"
+      alt="Suite 1A - A1-3 view from entrance"
+      loading="lazy"
+    />
   </div>
 </section>
 
