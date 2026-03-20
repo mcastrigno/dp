@@ -11,15 +11,27 @@ A website for **Donnelly Place**, a mixed-use building owned and operated by **V
 ## File Structure
 ```
 dp/
-├── index.html              # Main single-page website
-├── dp-idea-board.jsx       # Idea board (local/Claude only for now)
-├── images/
-│   ├── logo.png
-│   ├── building.jpg
-│   ├── entry.jpg
-│   ├── office.jpg
-│   ├── hallway.jpg
-│   └── keycode.jpg
+├── index.html                  # Main single-page website
+├── dp-idea-board.jsx           # Idea board (local/Claude only for now)
+├── package.json                # Node project (Sharp image pipeline)
+├── scripts/
+│   └── process-images.js       # Generates WebP variants; run: npm run process-images
+├── src/
+│   └── data/
+│       └── photos.js           # Auto-generated photo data (do not edit by hand)
+└── public/
+    └── images/
+        ├── site/               # General site images (logo, hero, etc.)
+        │   ├── logo.png
+        │   ├── building.jpg
+        │   ├── favicon.ico
+        │   └── ...
+        ├── APT 2A/             # Apartment & suite photos with WebP variants
+        ├── APT 2B/
+        ├── APT 2C/
+        ├── Suite 1A/
+        ├── Suite 1B/
+        └── Suite 1C/
 ```
 
 ## The Building
@@ -60,8 +72,14 @@ dp/
 - Functional contact form (needs email backend)
 - Idea board integrated behind login
 
+## Image Pattern
+Every `<img>` should use srcset + lazy loading:
+```html
+<img src="{original}" srcset="{400w} 400w, {800w} 800w, {1200w} 1200w"
+  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  width="{w}" height="{h}" alt="{alt}" loading="lazy"/>
+```
+Run `npm run process-images` after adding new photos to regenerate WebP variants and `src/data/photos.js`.
+
 ## Workflow
-1. Make changes in Claude
-2. Download updated file
-3. Save to local `dp/` folder
-4. Commit and push to GitHub → auto-deploys to GitHub Pages
+Edit locally → `git push` → auto-deploys to GitHub Pages
