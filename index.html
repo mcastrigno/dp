@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donnelly Place | Donnelly, Idaho</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="public/images/site/favicon.ico"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -46,7 +46,7 @@
 
     /* ── HERO ── */
     .hero { height:100vh; min-height:600px; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
-    .hero-bg { position:absolute; inset:0; background-image:url('images/building.jpg'); background-size:cover; background-position:center; animation:zoomIn 8s ease forwards; }
+    .hero-bg { position:absolute; inset:0; background-image:url('public/images/site/building.jpg'); background-size:cover; background-position:center; animation:zoomIn 8s ease forwards; }
     @keyframes zoomIn { from{transform:scale(1.05)} to{transform:scale(1)} }
     .hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(74,46,26,.4) 0%, rgba(74,46,26,.72) 100%); }
     .hero-content { position:relative; z-index:1; text-align:center; padding:2rem; }
@@ -168,7 +168,7 @@
 
 <nav>
   <a href="#" class="nav-logo">
-    <img src="images/logo.png" alt="Donnelly Place Logo"/>
+    <img src="public/images/site/logo.png" alt="Donnelly Place Logo"/>
     <span>Donnelly Place</span>
   </a>
   <ul class="nav-links">
@@ -209,22 +209,44 @@
     </div>
     <div class="spaces-grid">
       <div class="space-card">
-        <img class="space-card-img" src="images/entry.jpg" alt="Apartment entry"/>
+        <img class="space-card-img"
+          src="public/images/APT 2A/2A kitchen.webp"
+          width="1152" height="864"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="Apartment kitchen"
+          loading="lazy"/>
         <div class="space-card-title">Apartments</div>
         <p class="space-card-body">Comfortable, well-appointed residential units in the heart of Donnelly. Modern finishes and key-code access for security and convenience.</p>
       </div>
       <div class="space-card">
-        <img class="space-card-img" src="images/office.jpg" alt="Flex office space"/>
+        <img class="space-card-img"
+          src="public/images/Suite 1A/A1-2/1A-2.JPG"
+          srcset="public/images/Suite 1A/A1-2/1A-2-400.webp 400w, public/images/Suite 1A/A1-2/1A-2-800.webp 800w, public/images/Suite 1A/A1-2/1A-2-1200.webp 1200w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          width="3008" height="2000"
+          alt="Flex office space"
+          loading="lazy"/>
         <div class="space-card-title">Flex Space & Offices</div>
         <p class="space-card-body">Adaptable commercial square footage ready for your business. Clean, professional interiors with flexible layouts.</p>
       </div>
       <div class="space-card">
-        <img class="space-card-img" src="images/hallway.jpg" alt="Building hallway"/>
+        <img class="space-card-img"
+          src="public/images/site/building 1A-1 exterior.jpg"
+          width="677" height="381"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="Premier retail exterior"
+          loading="lazy"/>
         <div class="space-card-title">Premier Retail</div>
         <p class="space-card-body">High-visibility ground-floor retail with strong foot traffic. Put your business front and center in Donnelly's growing community.</p>
       </div>
       <div class="space-card">
-        <img class="space-card-img" src="images/keycode.jpg" alt="Key code access"/>
+        <img class="space-card-img"
+          src="public/images/Suite 1C/wide_reception.JPG"
+          srcset="public/images/Suite 1C/wide_reception-400.webp 400w, public/images/Suite 1C/wide_reception-800.webp 800w, public/images/Suite 1C/wide_reception-1200.webp 1200w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          width="3008" height="2000"
+          alt="Custom tenant improvement reception area"
+          loading="lazy"/>
         <div class="space-card-title">Custom TIs</div>
         <p class="space-card-body">We work with tenants on custom Tenant Improvements to tailor the space to your specifications — built to last, built for you.</p>
       </div>
@@ -246,7 +268,7 @@
           <div class="feature"><div class="feature-dot"></div><div class="feature-text"><h4>Central Location</h4><p>150 W Roseberry Rd — walkable, visible, and central to Donnelly.</p></div></div>
         </div>
       </div>
-      <img class="highlight-img" src="images/building.jpg" alt="Donnelly Place exterior"/>
+      <img class="highlight-img" src="public/images/site/building.jpg" alt="Donnelly Place exterior"/>
     </div>
   </div>
 </section>
@@ -361,7 +383,7 @@
 
 <footer>
   <div class="footer-brand">
-    <img src="images/logo.png" alt="DP Logo"/>
+    <img src="public/images/site/logo.png" alt="DP Logo"/>
     <span>Donnelly Place</span>
   </div>
   <div class="footer-copy">© 2025 Venture Investments, LLC · 150 W Roseberry Rd, Donnelly, ID 83615</div>
